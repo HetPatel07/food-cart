@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="h-100">
+
+    <!-- Start your project here-->
+    <div class="container-fluid h-100">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-8">
+                    <div class="row p-5">
+                        <div class="col-6">
+                            <div class="main" id="drag1" draggable="true" ondragstart="drag(event)">
+                                <img src="img/vada-pav-recipe-1.jpg" height="200px" width="250px" alt="">
+                                <p>20.00 rs</p>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="main" id="drag2" draggable="true" ondragstart="drag(event)">
+                                <img src="img/download%20(1).jfif" height="200px" width="250px" alt="">
+                                <p>40.00 rs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 bg-warning">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-8" id="div1" ondrop="drop(event,this)" ondragover="allowDrop(event)">
+                        </div>
+                        <div class="col-8" id="div1" ondrop="drop(event,this)" ondragover="allowDrop(event)">
+                        </div>
+                        <div class="col-12 d-flex justify-content-center">
+<!--<button type="button" class="btn btn-light" onclick="calc()">calculate price</button>-->
+                        </div>
+
+                        <div class="col-12 text-center">
+                            <p id="result">Your price</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Start your project here-->
+    <!--
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+
+    </script>
+-->
+
+    <!-- SCRIPTS -->
+    <script src="js/main.js"></script>
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.js"></script>
+</body>
+
+</html>
