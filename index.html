@@ -23,17 +23,18 @@
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-8">
-                    <div class="row p-5">
-                        <div class="col-6">
-                            <div class="main" id="drag1" draggable="true" ondragstart="drag(event)">
-                                <img src="img/vada-pav-recipe-1.jpg" height="200px" width="250px" alt="">
-                                <p>20.00 rs</p>
+                    <div class="row p-5" id="first" style="justify-content: space-evenly">
+                        <div class="col-5 bg-danger" ondrop="drop(event,this)" ondragover="allowDrop(event)">
+                            <div class="main text-center align-items-center" id="drag1" draggable="true" ondragstart="drag(event)">
+                                <img src="img/vada-pav-recipe-1.jpg" height="200px" width="250px" alt="" class="mt-4">
+                                <p class="">20.00 rs</p>
+
                             </div>
                         </div>
 
-                        <div class="col-6">
-                            <div class="main" id="drag2" draggable="true" ondragstart="drag(event)">
-                                <img src="img/download%20(1).jfif" height="200px" width="250px" alt="">
+                        <div class="col-5 bg-danger " ondrop="drop(event,this)" ondragover="allowDrop(event)">
+                            <div class="main text-center" id="drag2" draggable="true" ondragstart="drag(event)">
+                                <img src="img/download%20(1).jfif" height="200px" width="250px" alt="" class="mt-4">
                                 <p>40.00 rs</p>
                             </div>
                         </div>
@@ -41,13 +42,13 @@
                 </div>
 
                 <div class="col-4 bg-warning">
-                    <div class="row align-items-center justify-content-center">
+                    <div class="row align-items-center justify-content-center my-5" id="second">
                         <div class="col-8" id="div1" ondrop="drop(event,this)" ondragover="allowDrop(event)">
                         </div>
-                        <div class="col-8" id="div1" ondrop="drop(event,this)" ondragover="allowDrop(event)">
+                        <div class="col-8 mt-5" id="div2" ondrop="drop(event,this)" ondragover="allowDrop(event)">
                         </div>
                         <div class="col-12 d-flex justify-content-center">
-<!--<button type="button" class="btn btn-light" onclick="calc()">calculate price</button>-->
+                            <!--<button type="button" class="btn btn-light" onclick="calc()">calculate price</button>-->
                         </div>
 
                         <div class="col-12 text-center">

@@ -4,15 +4,20 @@ function allowDrop(ev) {
 
 function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
+    ev.dataTransfer.getData("text");
 }
 
 function drop(ev, t) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
-
-    t.childNodes[1].childNodes[3].setAttribute('class', 'price');
-    console.log(t.childNodes[1].childNodes[3]);
+    if (t.parentElement.getAttribute('id') == 'second') {
+        t.childNodes[1].childNodes[3].setAttribute('class', 'price');
+        console.log(t.parentElement.getAttribute('id'));
+    } else {
+        console.log(t.childNodes[2]);
+        t.childNodes[2].childNodes[3].removeAttribute('class');
+    }
     calc();
 }
 
